@@ -1,0 +1,33 @@
+.vscode/
+
+# IDEs and editors
+.idea/
+*.iml
+
+# Build output
+/target/
+/out/
+
+# Maven wrapper and local maven files
+/.mvn/
+mvnw
+mvnw.cmd
+
+# Logs and runtime files
+*.log
+.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+*.env
+
+# Temporary files
+*.tmp
+
+# IntelliJ
+/.idea/
+
