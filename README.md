@@ -15,6 +15,12 @@ Este README documenta cómo ejecutar la aplicación localmente y validar (con Po
 mvn spring-boot:run
 ```
 
+Si no tienes maven instalado
+
+```bash
+./mvnw spring-boot:run
+```
+
 2. La aplicación arrancará en `http://localhost:8080`.
 
 ## Inicializador de datos (seed)
