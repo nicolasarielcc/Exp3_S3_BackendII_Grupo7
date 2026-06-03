@@ -4,12 +4,14 @@ import com.minimarket.entity.Inventario;
 import com.minimarket.service.InventarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/inventario")
+@PreAuthorize("hasRole('EMPLEADO') or hasRole('ADMIN')")
 public class InventarioController {
 
     @Autowired

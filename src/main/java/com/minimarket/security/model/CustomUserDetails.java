@@ -19,7 +19,11 @@ public class CustomUserDetails implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return usuario.getRoles().stream()
-                .map(rol -> new SimpleGrantedAuthority(rol.getNombre()))
+                .map(rol -> {
+                    String nombre = rol.getNombre();
+                    String roleName = nombre.startsWith("ROLE_") ? nombre : "ROLE_" + nombre;
+                    return new SimpleGrantedAuthority(roleName);
+                })
                 .collect(Collectors.toList());
     }
 
