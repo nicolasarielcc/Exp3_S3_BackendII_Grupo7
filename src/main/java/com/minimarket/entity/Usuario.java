@@ -2,6 +2,7 @@ package com.minimarket.entity;
 
 import jakarta.persistence.*;
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Usuario {
@@ -13,6 +14,7 @@ public class Usuario {
     private String username;
 
     @Column(nullable = false)
+    @JsonIgnore
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)

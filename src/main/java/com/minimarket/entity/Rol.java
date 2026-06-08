@@ -2,6 +2,7 @@ package com.minimarket.entity;
 
 import jakarta.persistence.*;
 import java.util.Set;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Rol {
@@ -13,6 +14,7 @@ public class Rol {
     private String nombre;
 
     @ManyToMany(mappedBy = "roles")
+    @JsonIgnore
     private Set<Usuario> usuarios;
 
     // Getters y Setters
